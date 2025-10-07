@@ -1,0 +1,11 @@
+*{box-sizing: border-box;}
+img{width: 100%; display: block;}
+.btnpressme{
+  padding: 0.5em 2em;
+  color: whitesmoke;
+  border-radius: 12px;
+  background-color: rgb(50,50,50);
+}
+.btnactive{
+    
+}
