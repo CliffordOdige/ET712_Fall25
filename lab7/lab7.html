@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lab 7 by Clifford Odige</title>
-  <link rel="stylesheet" href="lab7_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 7 by Clifford Odige</title>
+    <link rel="stylesheet" href="lab7_style.css">
 </head>
 <body>
-  <h1>Lab 7 by Clifford Odige</h1>
-  <h1 id="title">Accessing elements</h1>
-  <p class="description">Traditional methods to access elements:</p>
-  <ul class="traditionalMethods">
-    <li class="method">getElementById</li>
-    <li class="method">getElementsByClassName</li>
-    <li class="method">getElementsByTagName</li>
-  </ul>
+    <h1>Lab 7 by Clifford Odige</h1>
 
-  <p class="description">Most recent methods to access elements:</p>
-  <ul class="recentMethods">
-    <li class="method">querySelector</li>
-    <li class="method">querySelectorAll</li>
-  </ul>
+    <h1 id="title">Accessing elements</h1>
+    <p class="description">Traditional methods to access elements:</p>
+    <ul class="traditionalMethods">
+        <li class="method">getElementById</li>
+        <li class="method">getElementByClassName</li>
+        <li class="method">getElementTagName</li>
+    </ul>
 
-  <section class="shapeContainer">
+    <p class="description">Most recent methods to access elements:</p>
+    <ul class="recentMethods">
+        <li class="method">querySelector</li>
+        <li class="method">querySelectorAll</li>
+    </ul>
+
+    <section class="shapeContainer">
         <div class="shapeDivision">Select the shape</div>
         <button class="btn_square">SQUARE</button>
         <button class="btn_circle">CIRCLE</button>
         <button class="btn_rectangle">RECTANGLE</button>
-  </section>
-  <h1>Inline event</h1>
-  <button onclick="alert('You clicked')"> CLICK HERE  </button>
-  <h1>Transitional event handler</h1>
-  <button class="btnpress">SHOW ME THE DATE</button>
-  <h1>Mouse events</h1>
-  <div class="circle x"></div>
-  <p class="circle_paragraph"></p>
+    </section>
 
-  
-  <script src="lab7_script.js"></script>
+    <h1>Inline event</h1>
+    <button onclick="alert('You clicked')">CLICK HERE</button>
+
+    <h1>Traditional event handler</h1>
+    <button class="btnpress">SHOW THE DATE</button>
+
+    <h1>Mouse events</h1>
+    <div class="circle x"></div>
+    <p class="circle_paragraph"></p>
+
+    <h1>Event Listener</h1>
+    <div class="rectangle box_color"></div>
+
+    <h1>Key event</h1>
+    <label for="username">Username:</label>
+    <input type="text" class="inputtext" id="username">
+    <p class="username_paragraph"></p>
+
+    <h1>EXERCISE</h1>
+    <main class="container">
+        <section class="s1">
+            <p class="ps1">Welcome to DOM styling</p>
+            <p class="ps2">Try to change the font-size to 25px</p>
+        </section>
+
+        <section class="s2">
+            <div class="divs2"></div>
+            <div class="divs3"></div>
+        </section>
+    </main>
+
+    <script src="lab7_script.js"></script>
 </body>
 </html>
