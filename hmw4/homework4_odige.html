@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 4, Window and Form Events</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <a href="#exercise1">Exercise 1, Form Validation</a>
+      <a href="#exercise2">Exercise 2, Card Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Exercise 1 -->
+    <section id="exercise1" class="panel">
+      <h2>Exercise 1, Form Validation and Event Handling</h2>
+
+      <form id="userForm" novalidate>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" />
+        <div class="error" id="nameError"></div>
+
+        <label for="email">Email Address</label>
+        <input type="text" id="email" />
+        <div class="error" id="emailError"></div>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+        <div class="error" id="passwordError"></div>
+
+        <button class="primary" type="submit">Submit</button>
+      </form>
+
+      <p id="successMessage" class="success"></p>
+    </section>
+
+    <!-- Exercise 2 -->
+    <section id="exercise2" class="panel">
+      <h2>Exercise 2, Card Gallery with Navigation</h2>
+
+      <div class="gallery-wrap">
+        <button class="nav-btn" id="leftBtn">&#8592; Left</button>
+
+        <div class="gallery-viewport" id="viewport">
+          <div class="cards-track" id="track">
+            <!-- 6 cards total, 3 visible at a time -->
+            <article class="card">
+              <img src="images/card1.jpg" alt="Card 1" />
+              <h3>Card 1</h3>
+              <p>Short description for card one.</p>
+              <a href="#">Learn more</a>
+            </article>
+            <article class="card">
+              <img src="images/card2.jpg" alt="Card 2" />
+              <h3>Card 2</h3>
+              <p>Short description for card two.</p>
+              <a href="#">Learn more</a>
+            </article>
+            <article class="card">
+              <img src="images/card3.jpg" alt="Card 3" />
+              <h3>Card 3</h3>
+              <p>Short description for card three.</p>
+              <a href="#">Learn more</a>
+            </article>
+            <article class="card">
+              <img src="images/card4.jpg" alt="Card 4" />
+              <h3>Card 4</h3>
+              <p>Short description for card four.</p>
+              <a href="#">Learn more</a>
+            </article>
+            <article class="card">
+              <img src="images/card5.jpg" alt="Card 5" />
+              <h3>Card 5</h3>
+              <p>Short description for card five.</p>
+              <a href="#">Learn more</a>
+            </article>
+            <article class="card">
+              <img src="images/card6.jpg" alt="Card 6" />
+              <h3>Card 6</h3>
+              <p>Short description for card six.</p>
+              <a href="#">Learn more</a>
+            </article>
+          </div>
+        </div>
+
+        <button class="nav-btn" id="rightBtn">Right &#8594;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">Homework 4, both exercises completed.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
