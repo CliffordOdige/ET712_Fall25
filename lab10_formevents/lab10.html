@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 10 - Input and Form Events by Clifford Odige</title>
+  <link rel="stylesheet" href="lab10_style.css">
+</head>
+<body>
+  <h1>Lab 10 - Input and Form Events</h1>
+
+  <!-- ========== CLASS EXAMPLE (User Info Form) ========== -->
+  <form class="myform" id="form1">
+    <legend class="legend">User Info</legend>
+
+    <section class="formcontrol">
+      <label class="form_label" for="username">Enter username:</label>
+      <input class="form_input" id="username" type="text" maxlength="20" placeholder="Type username...">
+      <p class="username_error_msg"></p>
+    </section>
+
+    <section class="formcontrol">
+      <label for="password" class="form_label">Enter a password:</label>
+      <input type="password" id="password" class="form_input" placeholder="Type your password...">
+    </section>
+
+    <input type="submit" value="SUBMIT" class="btnsubmit">
+
+    <!-- display a welcome message -->
+    <div class="greeting">
+      <p>Welcome to form events <span class="display_username">username</span></p>
+    </div>
+  </form>
+
+  <!-- ========== LAB EXERCISE (Username Availability Checker) ========== -->
+  <form id="registerForm" class="myform" action="formsent.html" method="get" novalidate>
+    <legend class="legend">Username Availability Checker</legend>
+
+    <section class="formcontrol">
+      <label class="form_label" for="usercheck">Choose a username:</label>
+      <input id="usercheck" class="form_input" type="text" maxlength="20" placeholder="Type a username...">
+      <p id="availability" class="username_error_msg" aria-live="polite"></p>
+    </section>
+
+    <input type="submit" class="btnsubmit" value="CHECK & SUBMIT">
+  </form>
+
+  <script src="lab10_script.js"></script>
+</body>
+</html>
