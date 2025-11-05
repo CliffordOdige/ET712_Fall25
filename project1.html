@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pre-K Learning Website</title>
+  <link rel="stylesheet" href="project1_style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Pre-K Learning Website</h1>
+      <p class="subtitle">Colors. Numbers. Animals and Shapes. Transportation.</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Primary">
+    <div class="container">
+      <ul class="tabs">
+        <li><a href="#colors" class="tab-link active">Colors</a></li>
+        <li><a href="#numbers" class="tab-link">Numbers</a></li>
+        <li><a href="#animals-shapes" class="tab-link">Animals & Shapes</a></li>
+        <li><a href="#transportation" class="tab-link">Transportation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main" class="container">
+    <!-- Colors Section -->
+    <section id="colors" class="panel">
+      <h2>Learn Colors</h2>
+      <p class="lead">Click a card or use the dropdown to learn colors.</p>
+
+      <div class="controls">
+        <label for="colorSelect"><strong>Pick a color from the dropdown:</strong></label>
+        <div class="control-row">
+          <select id="colorSelect">
+            <option value="">Choose…</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+            <option value="Purple">Purple</option>
+            <option value="Orange">Orange</option>
+            <option value="Pink">Pink</option>
+            <option value="Brown">Brown</option>
+          </select>
+          <button id="btnApplyColor" class="btn">Apply</button>
+        </div>
+
+        <div class="preview-wrap">
+          <div id="colorPreview" class="preview-box"></div>
+          <span class="preview-label">Preview</span>
+        </div>
+      </div>
+
+      <div class="cards grid-4" id="colorGrid">
+        <article class="card"><button class="card-btn" data-color="Red" style="--swatch:#ef4444;"><span class="swatch"></span><span class="card-title">Red</span></button></article>
+        <article class="card"><button class="card-btn" data-color="Blue" style="--swatch:#3b82f6;"><span class="swatch"></span><span class="card-title">Blue</span></button></article>
+        <article class="card"><button class="card-btn" data-color="Yellow" style="--swatch:#facc15;"><span class="swatch"></span><span class="card-title">Yellow</span></button></article>
+        <article class="card"><button class="card-btn" data-color="Green" style="--swatch:#22c55e;"><span class="swatch"></span><span class="card-title">Green</span></button></article>
+        <article class="card"><button class="card-btn" data-color="Purple" style="--swatch:#a855f7;"><span class="swatch"></span><span class="card-title">Purple</span></button></article>
+        <article class="card"><button class="card-btn" data-color="Orange" style="--swatch:#fb923c;"><span class="swatch"></span><span class="card-title">Orange</span></button></article>
+        <article class="card"><button class="card-btn" data-color="Pink" style="--swatch:#f472b6;"><span class="swatch"></span><span class="card-title">Pink</span></button></article>
+        <article class="card"><button class="card-btn" data-color="Brown" style="--swatch:#8b5e3c;"><span class="swatch"></span><span class="card-title">Brown</span></button></article>
+      </div>
+
+      <div class="callout">
+        <strong>Color picked:</strong>
+        <span id="colorResult">None</span>
+      </div>
+    </section>
+
+    <!-- Numbers Section -->
+    <section id="numbers" class="panel">
+      <h2>Count Numbers</h2>
+      <p class="lead">Use the buttons to shuffle and reset numbers.</p>
+      <div class="actions">
+        <button id="btnShuffle" class="btn">Shuffle</button>
+        <button id="btnResetNumbers" class="btn btn-secondary">Reset</button>
+      </div>
+      <ol class="number-grid" id="numberGrid">
+        <li data-num="1"><span class="num">1</span><span class="word">one</span></li>
+        <li data-num="2"><span class="num">2</span><span class="word">two</span></li>
+        <li data-num="3"><span class="num">3</span><span class="word">three</span></li>
+        <li data-num="4"><span class="num">4</span><span class="word">four</span></li>
+        <li data-num="5"><span class="num">5</span><span class="word">five</span></li>
+        <li data-num="6"><span class="num">6</span><span class="word">six</span></li>
+        <li data-num="7"><span class="num">7</span><span class="word">seven</span></li>
+        <li data-num="8"><span class="num">8</span><span class="word">eight</span></li>
+        <li data-num="9"><span class="num">9</span><span class="word">nine</span></li>
+        <li data-num="10"><span class="num">10</span><span class="word">ten</span></li>
+      </ol>
+    </section>
+
+    <!-- Animals and Shapes Section -->
+    <section id="animals-shapes" class="panel">
+      <h2>Animals and Shapes</h2>
+      <div class="two-col">
+        <div>
+          <h3>Animals</h3>
+          <ul class="emoji-list" id="animalList">
+            <li><span class="label">🐱 Cat</span></li>
+            <li><span class="label">🐶 Dog</span></li>
+            <li><span class="label">🦁 Lion</span></li>
+            <li><span class="label">🐘 Elephant</span></li>
+            <li><span class="label">🐟 Fish</span></li>
+          </ul>
+          <div class="actions">
+            <button id="btnHideAnimalWords" class="btn btn-secondary">Hide Names</button>
+            <button id="btnShowAnimalWords" class="btn">Show Names</button>
+          </div>
+        </div>
+
+        <div>
+          <h3>Shapes</h3>
+          <ul class="shape-list" id="shapeList">
+            <li><button class="shape-btn"><span class="shape circle"></span><span>Circle</span></button></li>
+            <li><button class="shape-btn"><span class="shape square"></span><span>Square</span></button></li>
+            <li><button class="shape-btn"><span class="shape triangle"></span><span>Triangle</span></button></li>
+            <li><button class="shape-btn"><span class="shape rectangle"></span><span>Rectangle</span></button></li>
+            <li><button class="shape-btn"><span class="shape star">★</span><span>Star</span></button></li>
+          </ul>
+          <p class="hint">Click each shape to toggle color.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transportation Section -->
+    <section id="transportation" class="panel">
+      <h2>Transportation</h2>
+      <p class="lead">Transportation gallery for learning.</p>
+
+      <div class="cards grid-3" id="transportationGallery">
+        <article class="card">
+          <img src="images/transportation/car.jpg" alt="Car" class="thumb">
+          <h3>Car</h3>
+        </article>
+        <article class="card">
+          <img src="images/transportation/bus.jpg" alt="Bus" class="thumb">
+          <h3>Bus</h3>
+        </article>
+        <article class="card">
+          <img src="images/transportation/plane.jpg" alt="Airplane" class="thumb">
+          <h3>Airplane</h3>
+        </article>
+        <article class="card">
+          <img src="images/transportation/train.jpg" alt="Train" class="thumb">
+          <h3>Train</h3>
+        </article>
+        <article class="card">
+          <img src="images/transportation/bicycle.jpg" alt="Bicycle" class="thumb">
+          <h3>Bicycle</h3>
+        </article>
+        <article class="card">
+          <img src="images/transportation/boat.jpg" alt="Boat" class="thumb">
+          <h3>Boat</h3>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Project 1 - Pre-K Learning Website | Clifford Odige | ET712 JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="project1_script.js"></script>
+</body>
+</html>
