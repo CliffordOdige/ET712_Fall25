@@ -26,11 +26,12 @@
   </nav>
 
   <main id="main" class="container">
-    <!-- Colors Section -->
+    <!-- Colors -->
     <section id="colors" class="panel">
       <h2>Learn Colors</h2>
       <p class="lead">Click a card or use the dropdown to learn colors.</p>
 
+      <!-- Dropdown -->
       <div class="controls">
         <label for="colorSelect"><strong>Pick a color from the dropdown:</strong></label>
         <div class="control-row">
@@ -54,6 +55,7 @@
         </div>
       </div>
 
+      <!-- Color cards -->
       <div class="cards grid-4" id="colorGrid">
         <article class="card"><button class="card-btn" data-color="Red" style="--swatch:#ef4444;"><span class="swatch"></span><span class="card-title">Red</span></button></article>
         <article class="card"><button class="card-btn" data-color="Blue" style="--swatch:#3b82f6;"><span class="swatch"></span><span class="card-title">Blue</span></button></article>
@@ -71,7 +73,7 @@
       </div>
     </section>
 
-    <!-- Numbers Section -->
+    <!-- Numbers -->
     <section id="numbers" class="panel">
       <h2>Count Numbers</h2>
       <p class="lead">Use the buttons to shuffle and reset numbers.</p>
@@ -93,40 +95,66 @@
       </ol>
     </section>
 
-    <!-- Animals and Shapes Section -->
-    <section id="animals-shapes" class="panel">
-      <h2>Animals and Shapes</h2>
-      <div class="two-col">
-        <div>
-          <h3>Animals</h3>
-          <ul class="emoji-list" id="animalList">
-            <li><span class="label">🐱 Cat</span></li>
-            <li><span class="label">🐶 Dog</span></li>
-            <li><span class="label">🦁 Lion</span></li>
-            <li><span class="label">🐘 Elephant</span></li>
-            <li><span class="label">🐟 Fish</span></li>
-          </ul>
-          <div class="actions">
-            <button id="btnHideAnimalWords" class="btn btn-secondary">Hide Names</button>
-            <button id="btnShowAnimalWords" class="btn">Show Names</button>
-          </div>
-        </div>
+    <!-- Animals and Shapes -->
+<section id="animals-shapes" class="panel">
+  <h2>Animals and Shapes</h2>
 
-        <div>
-          <h3>Shapes</h3>
-          <ul class="shape-list" id="shapeList">
-            <li><button class="shape-btn"><span class="shape circle"></span><span>Circle</span></button></li>
-            <li><button class="shape-btn"><span class="shape square"></span><span>Square</span></button></li>
-            <li><button class="shape-btn"><span class="shape triangle"></span><span>Triangle</span></button></li>
-            <li><button class="shape-btn"><span class="shape rectangle"></span><span>Rectangle</span></button></li>
-            <li><button class="shape-btn"><span class="shape star">★</span><span>Star</span></button></li>
-          </ul>
-          <p class="hint">Click each shape to toggle color.</p>
-        </div>
+  <div class="two-col">
+    <!-- ===== Left: Animals ===== -->
+    <div>
+      <h3>Animals</h3>
+
+      <ul class="emoji-list" id="animalList">
+        <li><button class="animal-btn" data-animal="Cat">🐱 <span class="label">Cat</span></button></li>
+        <li><button class="animal-btn" data-animal="Dog">🐶 <span class="label">Dog</span></button></li>
+        <li><button class="animal-btn" data-animal="Lion">🦁 <span class="label">Lion</span></button></li>
+        <li><button class="animal-btn" data-animal="Elephant">🐘 <span class="label">Elephant</span></button></li>
+        <li><button class="animal-btn" data-animal="Fish">🐟 <span class="label">Fish</span></button></li>
+      </ul>
+
+      <div class="actions">
+        <button id="btnHideAnimalWords" class="btn btn-secondary">Hide Names</button>
+        <button id="btnShowAnimalWords" class="btn">Show Names</button>
       </div>
-    </section>
 
-    <!-- Transportation Section -->
+      <!-- Preview card -->
+      <div class="preview-card">
+        <img id="animalPreview" alt="Animal preview" />
+        <p id="animalNameDisplay" class="muted">Click an animal to preview.</p>
+      </div>
+
+      <!-- Animal quiz -->
+      <div class="quiz">
+        <button id="startAnimalQuiz" class="btn">Start Animal Quiz</button>
+        <span id="animalPrompt" class="prompt"></span>
+        <div id="animalFeedback" class="feedback"></div>
+      </div>
+    </div>
+
+    <!-- ===== Right: Shapes ===== -->
+    <div>
+      <h3>Shapes</h3>
+      <ul class="shape-list" id="shapeList">
+        <li><button class="shape-btn" data-shape="Circle"><span class="shape circle"></span><span>Circle</span></button></li>
+        <li><button class="shape-btn" data-shape="Square"><span class="shape square"></span><span>Square</span></button></li>
+        <li><button class="shape-btn" data-shape="Triangle"><span class="shape triangle"></span><span>Triangle</span></button></li>
+        <li><button class="shape-btn" data-shape="Rectangle"><span class="shape rectangle"></span><span>Rectangle</span></button></li>
+        <li><button class="shape-btn" data-shape="Star"><span class="shape star">★</span><span>Star</span></button></li>
+      </ul>
+      <p class="hint">Click each shape to toggle color.</p>
+
+      <!-- Shape quiz -->
+      <div class="quiz">
+        <button id="startShapeQuiz" class="btn">Start Shape Quiz</button>
+        <span id="shapePrompt" class="prompt"></span>
+        <div id="shapeFeedback" class="feedback"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Transportation -->
     <section id="transportation" class="panel">
       <h2>Transportation</h2>
       <p class="lead">Transportation gallery for learning.</p>
@@ -166,6 +194,7 @@
     </div>
   </footer>
 
+  <!-- Keep script last so all elements exist -->
   <script src="project1_script.js"></script>
 </body>
 </html>
