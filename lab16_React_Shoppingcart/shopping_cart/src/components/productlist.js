@@ -1,8 +1,8 @@
 import React from "react";
-import '../Apps.css'
+import "../App.css"
 import apple from '../images/apple.png'
-import apple from '../images/grapes.png'
-import apple from '../images/oranges.png'
+import grapes from '../images/grapes.png'
+import orange from '../images/orange.png'
 
 const products=[
     {id: 1, name:"Apple", price:1, was:2.5, image: apple},
@@ -20,7 +20,7 @@ const ProductList = ({addToCart})=>{
                     products.map(
                         (product)=>(
                             <div key={product.id} className="card">
-                                <img src={product.image}/>
+                                <img src={product.image} alt={product.name}/>
                                 <p className="productname">
                                     {product.name}
                                     <s>{product.was}/lb</s>

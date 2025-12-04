@@ -11,12 +11,12 @@ const Cart = ({cart, removeFromCart})=> {
                     cart.map(
                         (item)=>(
                             <div key={item.div} className='itemcart'>
-                                <img className='cartitemimg' src={item.image}/>
+                                <img className='cartitemimg' src={item.image} alt={item.name}/>
                                 <p className='cartitemname'>{item.name}</p>
                                 <p className='cartitemprice'>{item.price}/lb</p>
                                 <p className='cartitemquantity'>{item.qty}/lbs</p>
                                 <p className='cartitemtotal'>{item.price * item.qty}</p>
-                                <p className='btncartremove' onClick={()=>removeFromCart(item.id)}> x Remove</button>
+                                <p className='btncartremove' onClick={()=>removeFromCart(item.id)}> x Remove</p>
                             </div>
                         )
                     )
