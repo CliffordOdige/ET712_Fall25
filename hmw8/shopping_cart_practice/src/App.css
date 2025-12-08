@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* productlist.js */
+.producttitle {
+  text-align: center;
+  color: darkgreen;
+}
+
+.cardcontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: solid gray 1px;
+  width: 220px;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.productname {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.productname s {
+  margin-left: 0.2rem;
+  color: darkgray;
+}
+
+.productname span {
+  font-size: 1.5rem;
+  color: crimson;
+  margin-left: 0.2rem;
+}
+
+.btn_addcart {
+  width: 100%;
+  border: none;
+  background-color: darkgreen;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.btn_addcart:hover {
+  cursor: pointer;
+  background-color: crimson;
+  box-shadow: 0px 0px 2px 1px gray;
+}
+
+/* cart.js */
+.carttitle {
+  color: darkgreen;
+  text-align: center;
+}
+
+.cartcontainer {
+  width: 1000px;
+  margin: 2rem auto;
+  border: solid 1px gray;
+  padding: 1.5rem;
+}
+
+.emptymsg {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: gray;
+}
+
+.itemcart {
+  display: flex;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.cartitemimg {
+  width: 10%;
+}
+
+.cartitemname {
+  padding-left: 2rem;
+}
+
+.cartitemprice,
+.cartitemquantity,
+.cartitemtotal {
+  width: 20%;
+  padding: 0.5rem;
+}
+
+.btncartremove {
+  color: crimson;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.btncartremove:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.totalcart {
+  border-top: solid gray 1px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 1rem 0rem;
+  text-align: right;
+}
+
+/* Navbar for Homework 8 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: darkgreen;
+  color: white;
+}
+
+.nav-logo {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Page Title */
+.apptitle {
+  text-align: center;
+  margin-top: 2rem;
+  color: darkgreen;
+}
