@@ -155,3 +155,48 @@ img {
   margin-top: 2rem;
   color: darkgreen;
 }
+/* CART PAGE CLEAN LAYOUT */
+.cartitemsbox {
+  width: 90%;
+  margin: auto;
+  border: 1px solid gray;
+  padding: 1rem;
+}
+
+.cartitem {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.cartitemimg {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 2rem;
+}
+
+.cartitemname {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.btncartremove {
+  color: crimson;
+  background-color: transparent;
+  border: none;
+  margin-top: .5rem;
+  cursor: pointer;
+}
+
+.btncartremove:hover {
+  text-decoration: underline;
+}
+
+.carttotalbox {
+  text-align: right;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

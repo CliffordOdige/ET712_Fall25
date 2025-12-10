@@ -1,38 +1,46 @@
+// src/components/Cart.js
 import React from "react";
-import "../App.css";
 
-const Cart = ({ cart, removeFromCart, total }) => {
+const Cart = ({ cart, removeFromCart, subtotal, tax, total }) => {
   return (
-    <div>
-      <h2 className="carttitle">Your Cart</h2>
-      <section className="cartcontainer">
-        {cart.length === 0 && (
-          <p className="emptymsg">Cart is empty</p>
-        )}
+    <main className="cart">
+      <h2>Your Cart</h2>
 
+      <section className="cartcontainer">
         {cart.map((item) => (
-          <div key={item.id} className="itemcart">
-            <img className="cartitemimg" src={item.image} alt={item.name} />
-            <p className="cartitemname">{item.name}</p>
-            <p className="cartitemprice">${item.price}/each</p>
-            <p className="cartitemquantity">
-              Quantity = {item.qty}
+          <div key={item.id} className="cartitem">
+            <img
+              src={item.image}
+              alt={item.name}
+              className="cartitemimg"
+            />
+
+            <p className="cartitemname">
+              {item.name} ${item.price}/each
             </p>
+
+            <p className="cartitemquantity">Quantity = {item.qty}</p>
+
             <p className="cartitemtotal">
-              Total = {item.price * item.qty}
+              Total = {(item.price * item.qty).toFixed(2)}
             </p>
+
             <button
               className="btncartremove"
               onClick={() => removeFromCart(item.id)}
             >
-              x Remove
+              Remove
             </button>
           </div>
         ))}
-
-        <p className="totalcart">Total: ${total}</p>
       </section>
-    </div>
+
+      <div className="carttotals">
+        <p>Subtotal: ${subtotal.toFixed(2)}</p>
+        <p>NY sales tax (8.16%): ${tax.toFixed(2)}</p>
+        <p className="cartgrandtotal">Total: ${total.toFixed(2)}</p>
+      </div>
+    </main>
   );
 };
 

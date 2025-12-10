@@ -1,14 +1,15 @@
 import React from "react";
 import "../App.css";
-import apple from "../images/apple.png";
-import grapes from "../images/grapes.png";  // or grape.png depending on file
-import orange from "../images/orange.png";
+import apple from "./images/apple.png";
+import grapes from "./images/grapes.png";  // or grape.png depending on file
+import orange from "./images/orange.png";
 
 const products = [
-  { id: 1, name: "Apple", price: 1,   was: 2.5, image: apple },
-  { id: 2, name: "Grapes", price: 1.5, was: 2.8, image: grapes },
-  { id: 3, name: "Orange", price: 3,   was: 5.0, image: orange },
+  { id: 1, name: "Apple",  price: 1,   image: apple },
+  { id: 2, name: "Grapes", price: 1.5, image: grapes },
+  { id: 3, name: "Orange", price: 3,   image: orange },
 ];
+
 
 const ProductList = ({ addToCart }) => {
   return (
